@@ -1,0 +1,19 @@
+public class SaltTossGame : MonoBehaviour {
+    public GameObject ticketA;
+    public GameObject ticketB;
+    private GameObject correctTicket;
+
+    void Start() {
+        correctTicket = Random.value > 0.5f ? ticketA : ticketB;
+    }
+
+    public void TossSalt(GameObject target) {
+        if (target == correctTicket) {
+            Debug.Log("Correct Ticket!");
+            // Unlock Salt Spark or foil comic
+        } else {
+            Debug.Log("Wrong Ticket!");
+            // Trigger sarcastic mascot reaction
+        }
+    }
+}
